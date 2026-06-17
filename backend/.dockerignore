@@ -1,0 +1,9 @@
+# Build output folder
+target/
+!target/*.jar
+
+# IDE and local files
+.idea/
+.vscode/
+*.log
+*.iml
