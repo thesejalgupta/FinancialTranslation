@@ -12,7 +12,7 @@ const uiSlice = createSlice({
   name: 'ui',
   initialState: {
     mode: (localStorage.getItem('mp-ftms-mode') as ColorMode) || 'light',
-    drawerOpen: true
+    drawerOpen: true as boolean
   } satisfies UiState,
   reducers: {
     toggleMode(state) {
@@ -70,4 +70,3 @@ export const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
-
