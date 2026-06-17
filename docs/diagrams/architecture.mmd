@@ -1,0 +1,9 @@
+flowchart LR
+  Browser["React bilingual FTMS UI"] --> Nginx["Nginx"]
+  Nginx --> API["Spring Boot API"]
+  API --> Postgres["PostgreSQL"]
+  API --> Mongo["MongoDB"]
+  API --> Redis["Redis"]
+  API --> Rabbit["RabbitMQ"]
+  API --> Integrations["Mock government integrations"]
+

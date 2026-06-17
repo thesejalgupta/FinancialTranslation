@@ -1,0 +1,61 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: mp-ftms
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/mp_ftms}
+    username: ${DB_USERNAME:ftms_user}
+    password: ${DB_PASSWORD:ftms_password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: ${FLYWAY_ENABLED:false}
+    baseline-on-migrate: true
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://localhost:27017/mp_ftms_logs}
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+  cache:
+    type: ${SPRING_CACHE_TYPE:simple}
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+security:
+  jwt:
+    issuer: mp-government-ftms
+    secret: ${JWT_SECRET:mp-ftms-demo-secret-change-this-in-production-64-bytes}
+    access-token-minutes: ${JWT_ACCESS_MINUTES:30}
+    refresh-token-days: ${JWT_REFRESH_DAYS:7}
+
+app:
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5173,http://localhost:4173,http://localhost:8081}
+  demo:
+    seed-enabled: ${DEMO_SEED_ENABLED:true}
+

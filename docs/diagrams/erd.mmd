@@ -1,0 +1,9 @@
+erDiagram
+  ROLES ||--o{ USERS : grants
+  DEPARTMENTS ||--o{ USERS : owns
+  DEPARTMENTS ||--o{ BUDGETS : allocates
+  BUDGETS ||--o{ FINANCIAL_TRANSACTIONS : funds
+  BENEFICIARIES ||--o{ FINANCIAL_TRANSACTIONS : receives
+  FINANCIAL_TRANSACTIONS ||--o{ APPROVALS : requires
+  FINANCIAL_TRANSACTIONS ||--o{ RECONCILIATION_RECORDS : reconciles
+
