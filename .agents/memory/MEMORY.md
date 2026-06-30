@@ -1,0 +1,2 @@
+- [FTMS database setup](ftms-db-setup.md) — MariaDB server can't initialize in Replit sandbox (syscall blocked); H2 in MySQL mode is used instead.
+- [FTMS deployment](ftms-deployment.md) — Full-stack: build.sh copies frontend dist into backend static resources, Spring Boot serves everything; autoscale on port 5000.

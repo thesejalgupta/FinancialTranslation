@@ -1,27 +1,45 @@
 package mp.gov.ftms.domain;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import mp.gov.ftms.config.JsonMapConverter;
 
 import java.time.Instant;
 import java.util.Map;
+import java.util.UUID;
 
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "analytics_snapshots")
+@Entity
+@Table(name = "analytics_snapshots")
 public class AnalyticsSnapshot {
     @Id
     private String id;
-    private String scope;
-    private Map<String, Object> metrics;
-    private Instant capturedAt;
-}
 
+    @Column(length = 120)
+    private String scope;
+
+    @Convert(converter = JsonMapConverter.class)
+    @Column(columnDefinition = "TEXT")
+    private Map<String, Object> metrics;
+
+    private Instant capturedAt;
+
+    @jakarta.persistence.PrePersist
+    void prePersist() {
+        if (id == null) {
+            id = UUID.randomUUID().toString();
+        }
+    }
+}

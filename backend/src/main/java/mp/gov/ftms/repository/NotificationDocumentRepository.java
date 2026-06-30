@@ -1,8 +1,7 @@
 package mp.gov.ftms.repository;
 
 import mp.gov.ftms.domain.NotificationDocument;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface NotificationDocumentRepository extends MongoRepository<NotificationDocument, String> {
+public interface NotificationDocumentRepository extends JpaRepository<NotificationDocument, String> {
 }
-
