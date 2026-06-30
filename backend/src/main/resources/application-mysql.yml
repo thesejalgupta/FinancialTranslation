@@ -1,0 +1,52 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: mp-ftms
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/mp_ftms?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:ftms_user}
+    password: ${DB_PASSWORD:ftms_password}
+    driver-class-name: ${DB_DRIVER:com.mysql.cj.jdbc.Driver}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: ${HIBERNATE_DIALECT:org.hibernate.dialect.MySQL8Dialect}
+        type:
+          preferred_uuid_jdbc_type: CHAR
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: false
+  cache:
+    type: simple
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+security:
+  jwt:
+    issuer: mp-government-ftms
+    secret: ${JWT_SECRET:mp-ftms-demo-secret-change-this-in-production-64-bytes}
+    access-token-minutes: ${JWT_ACCESS_MINUTES:30}
+    refresh-token-days: ${JWT_REFRESH_DAYS:7}
+
+app:
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5000,http://localhost:5173,http://localhost:4173,http://localhost:8081}
+  demo:
+    seed-enabled: ${DEMO_SEED_ENABLED:true}

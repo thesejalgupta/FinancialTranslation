@@ -1,6 +1,6 @@
-# MP Government FTMS
+# FTMS
 
-Production-grade demo Financial Transaction Management System for the Government of Madhya Pradesh.
+Production-grade demo financial transaction management system.
 
 ## Stack
 
