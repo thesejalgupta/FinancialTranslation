@@ -50,6 +50,6 @@ security:
 
 app:
   cors:
-    allowed-origins: ${CORS_ORIGINS:http://localhost:5000,http://localhost:5173,http://localhost:4173,https://${REPLIT_DEV_DOMAIN:localhost}}
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5000,http://localhost:5173,http://localhost:4173,http://localhost:5002,http://localhost:*}
   demo:
     seed-enabled: ${DEMO_SEED_ENABLED:true}
