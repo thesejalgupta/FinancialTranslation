@@ -1,0 +1,57 @@
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+[32m :: Spring Boot :: [39m              [2m (v3.3.5)[0;39m
+
+[2m2026-06-30T06:50:58.113Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mmp.gov.ftms.FtmsApplication             [0;39m [2m:[0;39m Starting FtmsApplication v1.0.0 using Java 19.0.2 with PID 1680 (/home/runner/workspace/backend/target/ftms-backend-1.0.0.jar started by runner in /home/runner/workspace/backend)
+[2m2026-06-30T06:50:58.115Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mmp.gov.ftms.FtmsApplication             [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+[2m2026-06-30T06:51:00.024Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2026-06-30T06:51:00.139Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 105 ms. Found 12 JPA repository interfaces.
+[2m2026-06-30T06:51:01.107Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port 8080 (http)
+[2m2026-06-30T06:51:01.121Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2026-06-30T06:51:01.121Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.31]
+[2m2026-06-30T06:51:01.152Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2026-06-30T06:51:01.153Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 2977 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+[2m2026-06-30T06:51:01.297Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2026-06-30T06:51:01.542Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/mp_ftms user=SA
+[2m2026-06-30T06:51:01.545Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[2m2026-06-30T06:51:01.555Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.s.b.a.h2.H2ConsoleAutoConfiguration   [0;39m [2m:[0;39m H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/mp_ftms'
+[2m2026-06-30T06:51:01.785Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+[2m2026-06-30T06:51:01.844Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate ORM core version 6.5.3.Final
+[2m2026-06-30T06:51:01.872Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.h.c.internal.RegionFactoryInitiator   [0;39m [2m:[0;39m HHH000026: Second-level cache disabled
+[2m2026-06-30T06:51:02.133Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.s.o.j.p.SpringPersistenceUnitInfo     [0;39m [2m:[0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+[2m2026-06-30T06:51:02.205Z[0;39m [33m WARN[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36morg.hibernate.orm.incubating            [0;39m [2m:[0;39m HHH90006001: Encountered incubating setting [hibernate.type.preferred_uuid_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+[2m2026-06-30T06:51:02.500Z[0;39m [33m WARN[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36morg.hibernate.orm.incubating            [0;39m [2m:[0;39m HHH90006001: Encountered incubating setting [hibernate.type.preferred_uuid_jdbc_type].  See javadoc on corresponding `org.hibernate.cfg.AvailableSettings` constant for details.
+[2m2026-06-30T06:51:03.352Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.h.e.t.j.p.i.JtaPlatformInitiator      [0;39m [2m:[0;39m HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2m2026-06-30T06:51:03.481Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2026-06-30T06:51:04.064Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36meAuthenticationProviderManagerConfigurer[0;39m [2m:[0;39m Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+[2m2026-06-30T06:51:04.066Z[0;39m [33m WARN[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mr$InitializeUserDetailsManagerConfigurer[0;39m [2m:[0;39m Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+[2m2026-06-30T06:51:04.870Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.s.b.a.e.web.EndpointLinksResolver     [0;39m [2m:[0;39m Exposing 3 endpoints beneath base path '/actuator'
+[2m2026-06-30T06:51:05.550Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port 8080 (http) with context path '/'
+[2m2026-06-30T06:51:05.563Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mmp.gov.ftms.FtmsApplication             [0;39m [2m:[0;39m Started FtmsApplication in 8.076 seconds (process running for 9.094)
+[2m2026-06-30T06:51:06.309Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [           main][0;39m [2m[0;39m[36mmp.gov.ftms.seed.DemoDataSeeder         [0;39m [2m:[0;39m Demo FTMS data seeded. Login with super.admin@mp.gov.in / Admin@123
+[2m2026-06-30T06:51:42.818Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [nio-8080-exec-1][0;39m [2m[0;39m[36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2m2026-06-30T06:51:42.819Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [nio-8080-exec-1][0;39m [2m[0;39m[36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2026-06-30T06:51:42.821Z[0;39m [32m INFO[0;39m [35m1680[0;39m [2m---[0;39m [2m[mp-ftms] [nio-8080-exec-1][0;39m [2m[0;39m[36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+Exception in thread "SpringApplicationShutdownHook" java.lang.NoClassDefFoundError: ch/qos/logback/classic/spi/ThrowableProxy
+	at ch.qos.logback.classic.spi.LoggingEvent.<init>(LoggingEvent.java:145)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:424)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:386)
+	at ch.qos.logback.classic.Logger.log(Logger.java:780)
+	at org.apache.commons.logging.LogAdapter$Slf4jLocationAwareLog.warn(LogAdapter.java:445)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1151)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1102)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.classic.spi.ThrowableProxy
+	... 12 more
